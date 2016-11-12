@@ -11,9 +11,9 @@ class AssignmentNetworks(Topo):
     def __init__(self, **opts):
         Topo.__init__(self, **opts)
 
-        lvl1_bw = 100000000
-        lvl2_bw = 100000
-        lvl3_bw = 100
+        lvl1_bw = 100
+        lvl2_bw = 40
+        lvl3_bw = 10
 
         lvl1_delay = '30ms'
         lvl2_delay = '20ms'
@@ -60,9 +60,6 @@ class AssignmentNetworks(Topo):
         self.addLink(e3, h6, **lvl3params)
         self.addLink(e4, h7, **lvl3params)
         self.addLink(e4, h8, **lvl3params)
-
-# topos = { 'AssignmentNetworks': ( lambda: AssignmentNetworks() ) }
-
 
 #if __name__ == '__main__':
 setLogLevel( 'info' )
